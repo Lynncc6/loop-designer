@@ -10,20 +10,20 @@
 
 市面上有很多 skill，但没有人告诉你**怎么把它们组合起来用**。Loop Designer 填补了这个空白：
 
-- ❓ "我这个任务该用 `/goal` 还是 `/loop`？"
-- ❓ "怎么让 agent 自己检查自己的活？"
-- ❓ "有哪些现成的 skill 能配合这个任务？"
-- ❓ "怎么防止 agent 死循环烧 token？"
-- ❓ "PR review / bug triage / Lighthouse 优化这些常见场景有没有现成方案？"
+-  "我这个任务该用 `/goal` 还是 `/loop`？"
+-  "怎么让 agent 自己检查自己的活？"
+-  "有哪些现成的 skill 能配合这个任务？"
+-  "怎么防止 agent 死循环烧 token？"
+-  "PR review / bug triage / Lighthouse 优化这些常见场景有没有现成方案？"
 
 ## 四种 Loop，一张图看懂
 
-| 类型 | 触发方式 | 停止条件 | 适用场景 | 原语 |
-|------|---------|---------|---------|------|
-| **Turn-based** | 你每轮发 prompt | Agent 判断完成 | 探索、一次性任务 | Skills（自验证） |
-| **Goal-based** | `/goal` 命令 | 目标达成 or 达到最大轮次 | 有可量化退出标准的任务 | `/goal` |
-| **Time-based** | `/loop` 或 `/schedule` | 你取消 or 任务完成 | 周期性工作、对接外部系统 | `/loop`, `/schedule` |
-| **Proactive** | 事件/日程，无人值守 | 每个子任务达成目标即停 | 定义清晰的重复性工作流 | 以上全部 + workflows + auto |
+| 类型 | 触发方式 | 停止条件 | 适用场景 |
+|------|---------|---------|---------|
+| **Turn-based** | 你每轮发 prompt | Agent 判断完成 | 探索、一次性任务 | 
+| **Goal-based** | `/goal` 命令 | 目标达成 or 达到最大轮次 | 有可量化退出标准的任务 |
+| **Time-based** | `/loop` 或 `/schedule` | 你取消 or 任务完成 | 周期性工作、对接外部系统 |
+| **Proactive** | 事件/日程，无人值守 | 每个子任务达成目标即停 | 定义清晰的重复性工作流 | 
 
 > **最强的 loop 是组合**：`/schedule` + `/goal` + skills + workflows
 
