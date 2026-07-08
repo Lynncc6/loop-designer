@@ -163,5 +163,3 @@ mv loop-designer ~/.agents/skills/
 Loop 类型定义基于 [@delba_oliveira / Claude Code 团队的官方文章](https://x.com/ClaudeDevs/status/2074208949205881033)。
 
 ---
-
-*把信息按"结论摘要 → 可筛选的概览 → 逐条明细"三层重排，让颜色只为"信号"服务。* — 不，这是另一个项目的 😄
